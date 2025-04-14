@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Kanban PM2</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div class="navbar">
+      <div class="quadro-area" id="quadroArea"></div>
+
+      <div class="avisos-area">
+        <div class="titulo-avisos">Avisos</div>
+        <div class="box-avisos" contenteditable="true"></div>
+      </div>
+
+      <div class="membros-area">
+        <div class="titulo-membros">Membros</div>
+        <div class="lista-membros" id="listaMembros">
+          <button class="convidar-membro" onclick="convidarMembro()">+ Convidar membro</button>
+        </div>
+      </div>
+    </div>
+
+    <div class="main-area">
+      <div class="container" id="container"></div>
+    </div>
+
+    <div class="btn-area" style="text-align:center; margin-top:20px">
+      <button onclick="document.getElementById('container').appendChild(criarCard()); salvarCards();">+ Criar Cartão</button>
+    </div>
+
+    <script src="script.js"></script>
+  </body>
+</html>
